@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>✨ SHOP TINLUU.STORE | Acc Random Siêu Đẹp</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS của bạn -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HIỆU ỨNG NỀN -->
+    <div class="aurora-bg"></div>
+    <div class="matrix-grid"></div>
+    <div class="snowflakes" id="snowflakesContainer"></div>
+    
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- MODAL OVERLAY -->
+    <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal-content" style="position: relative;">
+            <button class="modal-close-btn" id="modalCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalInnerContent"></div>
+        </div>
+    </div>
+
+    <div class="main-container" id="mainContainer">
+        <!-- ========== AUTH SECTION ========== -->
+        <div id="authSection" class="auth-section">
+            <div class="shop-badge">
+                <i class="fas fa-crown"></i> TINLUU.STORE <i class="fas fa-crown"></i>
+            </div>
+            <div class="auth-title" id="authTitle">Đăng Nhập</div>
+            
+            <div class="auth-toggle">
+                <button id="loginToggleBtn" class="active">🔑 Đăng Nhập</button>
+                <button id="registerToggleBtn">✨ Đăng Ký</button>
+            </div>
+
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fas fa-user-astronaut"></i>
+                    <input type="text" id="usernameInput" placeholder="Tên đăng nhập" autocomplete="off">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-key"></i>
+                    <input type="password" id="passwordInput" placeholder="Mật khẩu" autocomplete="off">
+                </div>
+                <div class="input-field" id="confirmPasswordField" style="display: none;">
+                    <i class="fas fa-check-double"></i>
+                    <input type="password" id="confirmPasswordInput" placeholder="Xác nhận mật khẩu">
+                </div>
+            </div>
+
+            <button class="auth-btn" id="authActionBtn">
+                <i class="fas fa-rocket"></i> <span id="authBtnText">Đăng Nhập</span>
+            </button>
+            <div style="text-align:center; font-size:12px; color:#64748b; margin-top:4px;">
+                <i class="fas fa-shield-haltered"></i> Bảo mật tuyệt đối • Mã hóa AES-256
+            </div>
+        </div>
+
+        <!-- ========== SHOP SECTION ========== -->
+        <div id="shopSection" class="shop-section" style="display: none;">
+            <div class="welcome-banner">
+                <div class="welcome-text" id="welcomeMessage">
+                    💜 Shop tinluu.store xin chào <span>Em Trai</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn" title="Đăng xuất">
+                    <i class="fas fa-door-open"></i>
+                </button>
+            </div>
+
+            <!-- FLASH SALE -->
+            <div class="flash-sale-badge">
+                <i class="fas fa-bolt"></i> FLASH SALE <span id="countdownTimer">00:00</span> <i class="fas fa-fire"></i>
+            </div>
+
+            <!-- NÚT NẠP TIỀN -->
+            <button class="deposit-btn" id="depositBtn">
+                <i class="fas fa-qrcode"></i> NẠP TIỀN • CHUYỂN KHOẢN QR <i class="fas fa-credit-card"></i>
+            </button>
+
+            <!-- SẢN PHẨM RANDOM ACC -->
+            <div class="product-card">
+                <i class="fas fa-dice-d20 acc-icon"></i>
+                <div class="product-name">RANDOM ACC</div>
+                
+                <!-- ===== 1 ẢNH LIÊN QUÂN DUY NHẤT ===== -->
+                <div class="acc-image-container" onclick="openAccDetail()">
+                    <!-- THAY LINK ẢNH BẰNG ẢNH CỦA BẠN -->
+                    <img src="https://i.imgur.com/JLgPW9r.jpg" alt="Acc Liên Quân Mobile" onerror="this.src='https://placehold.co/800x450/1a1025/fbbf24?text=ACC+LIEN+QUAN+MOBILE'">
+                    <span class="acc-image-label">⚔️ Liên Quân Mobile</span>
+                    <span class="acc-image-badge">🔥 HOT</span>
+                </div>
+
+                <!-- CHỈ BÁO 8 TRANG -->
+                <div class="page-indicator">
+                    <span>📄 Trang</span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span>1/8</span>
+                </div>
+
+                <div class="price-tag">
+                    <span>15.000đ</span> 
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div style="color:#c4b5fd; font-size:14px; margin-top:-8px;">
+                    <i class="fas fa-gift"></i> Acc Liên Quân • Random cực chất
+                </div>
+                
+                <!-- ===== NÚT MUA ===== -->
+                <div class="buy-buttons-group">
+                    <a href="https://zalo.me/0776307956" target="_blank" class="buy-btn-main" style="text-decoration: none;">
+                        <i class="fas fa-shopping-cart"></i> MUA NGAY <i class="fas fa-bolt"></i>
+                    </a>
+                    
+                    <a href="https://zalo.me/0776307956" target="_blank" class="buy-btn-zalo" style="text-decoration: none;">
+                        <span class="zalo-icon-small">Z</span> Chat Zalo: 0776307956 <i class="fas fa-comment-dots"></i>
+                    </a>
+                </div>
+
+                <!-- CODES -->
+                <div class="codes-section">
+                    <div class="code-badge"><i class="fas fa-hashtag"></i> LIENQUAN</div>
+                    <div class="code-badge"><i class="fas fa-hashtag"></i> FREEFIRE</div>
+                    <div class="code-badge"><i class="fas fa-hashtag"></i> VALORANT</div>
+                    <div class="code-badge"><i class="fas fa-hashtag"></i> TOCCHIEN</div>
+                    <div class="code-badge"><i class="fas fa-gem"></i> VIP15K</div>
+                    <div class="code-badge"><i class="fas fa-crown"></i> RANDOM2026</div>
+                    <div class="code-badge"><i class="fas fa-star"></i> ACCNGON</div>
+                    <div class="code-badge"><i class="fas fa-fire"></i> SALE50</div>
+                    <div class="code-badge"><i class="fas fa-heart"></i> TINLUU</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript của bạn -->
+    <script src="script.js"></script>
+    
+    <!-- Thêm phần này để hiển thị thông tin deploy -->
+    <div style="position:fixed; bottom:10px; left:50%; transform:translateX(-50%); z-index:999; background:rgba(0,0,0,0.7); padding:8px 20px; border-radius:20px; color:#64748b; font-size:11px; backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); pointer-events:none;">
+       Shoptinluu.store (ramdom)
+    </div>
+</body>
+</html>
