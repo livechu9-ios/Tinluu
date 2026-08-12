@@ -126,7 +126,7 @@
                 <div class="info-row">
                     <span style="color:#94a3b8;">🔢 Số TK:</span>
                     <span style="color:#fbbf24; font-weight:700;">0935742761</span>
-                    <button class="copy-btn" onclick="navigator.clipboard.writeText('0776307956').then(()=>alert('Đã sao chép số tài khoản!'))">
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText('0935742761').then(()=>alert('Đã sao chép số tài khoản!'))">
                         <i class="fas fa-copy"></i> Copy
                     </button>
                 </div>
